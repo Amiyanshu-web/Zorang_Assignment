@@ -1,23 +1,28 @@
-## Approach
+## Approach:
 
-### Data Retrieval:
-- I have retrieved the data from the given URL and stored it as a list of sub-lists, each containing latitude, longitude, and ID.
+**Data Retrieval:**
 
-### Optimization Algorithm:
-- Utilizing the Binary Search Algorithm to determine the optimal delivery schedule.
-- Starting from the maximum distance each agent can travel and iteratively checking if it's possible to assign orders within that limit.
-- If feasible, assigning orders to agents while minimizing the total distance traveled. Otherwise, decreasing the maximum distance and trying again.
+* I have retrieved the data from given URL and stored the retrieved data as a list of sub-lists, each containing the latitude, longitude and ID.
 
-### Assigning Orders:
-- For each iteration, creating a temporary empty list of sub-lists, each representing an agent.
-- Calculating the distance from the store to each order.
-- For each order, finding the closest agent with available capacity and adding the order to their list.
-- If an agent reaches their capacity, moving to the next agent.
-- This process continues until all orders are assigned or it's clear the current distance limit is not feasible.
+**Optimization Algorithm:**
 
-### Balancing Assignments:
-- After finding the optimal distance limit, checking if any agents have no orders.
-- If so, distributing leftover orders from agents with more than one order to ensure everyone has at least one delivery.
+* I have used Binary Search Algorithm to find the optimal delivery schedule.
+* We start from the maximum distance each agent can travel and iteratively checks if it’s possible to assign order within that limit.
+* If feasible, we assign orders to agents while minimizing the total distance travelled. Else, we decrease the maximum distance and tries again.
 
-### Output:
-- The code ultimately outputs a list of sub-lists, each representing the orders assigned to a specific delivery agent.
+**Assigning Orders:**
+
+* For each iteration, I have created a temporary empty list of sub-lists, each representing an agent.
+* After that I have calculated the distance from the store to each order.
+* For each order, I find the closest agent with available capacity and add the order to their list.
+* If an agent reaches their capacity, it moves to the next agent.
+* This process continues until all orders are assigned or it’s clear the current distance limit is not feasible.
+
+**Balancing Assignments:**
+
+* After finding the optimal distance limit, I check if any agents have no orders.
+* If so, I distribute leftover order from agents with more than one order to ensure everyone has at least one delivery.
+
+**Output:**
+
+* The code ultimately outputs a list of sub-lists, each representing the orders assigned to a specific delivery agent.
